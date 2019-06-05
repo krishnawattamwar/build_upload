@@ -46,6 +46,18 @@ if [ $yes = $a  ]; then
 
 		#live project path
 		cd /home/user/repo/live
+#update your qa repo using git command
+echo -e "\nIf you want to update your Live repo using git pull (y or n)"
+a=y
+read -p "yes(y) or No(n)- " yes
+
+if [ $yes = $a  ]; then
+
+	echo " "
+	echo "Enter git password"
+	git pull
+fi
+
 		echo " "
 		echo "live Projects name are as below-"
 		echo "--------------------------"
@@ -62,8 +74,10 @@ if [ $yes = $a  ]; then
 		tar xvf build_upload.tar.gz
 		rm -rf build_upload.tar.gz
 
-		#git commit -a -m " "
-		#git status && git push
+git status
+#echo -e "\nEnter git comment"
+#read -p "git_comment" git_comment
+#git commit -a -m "$git_comment" && git push
 
 		echo " "
 		echo "----------------------------------------------------------------"
